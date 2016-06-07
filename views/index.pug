@@ -1,0 +1,25 @@
+extends ./layouts/layout.pug
+
+block content
+	div.container
+		div.row#headIntro
+			h1 #{locals.config.boothName}
+			p Let the world know that you were here at #[a.green-text(href="http://make-i-stan.co") Makeistan.] Learn more about our story #[a(href="http://make-i-stan.co") here]
+			p Like this? Make yours. Visit #[a(href="https://github.com/Makeistan/makeistan-photo-booth") github repo] of this photo booth
+		div.row.center
+			div.card-panel
+				h1.green-text Take a picture!
+				div#canvasPhoto
+			div.card-panel
+				.row
+					h5 Your title here!
+					input.form-control#canvasText(type="text")
+					p
+						button#savePictureBtn.waves-effect.waves-light.btn Save the picture!
+						br
+						br
+						button#tweetPictureBtn.waves-effect.waves-light.btn Take a picture!
+
+block scripts
+	include ./includes/clientKeys.pug
+	script(src="./js/index.js")
