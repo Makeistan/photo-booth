@@ -1,0 +1,16 @@
+#photoModal.modal.modal-fixed-footer
+	.modal-content
+		.row.center.text-center
+			h3 Picture you just took!
+			img#testPic.responsive-img.modal-title.materialboxed(
+				data-caption="Makeistan Photo Booth Picture!",
+				src="/assets/img/photo-placeholder.png",
+				width="auto",
+				height="auto"
+				)
+			h5 enter your twitter screen names!
+			input.form-control.text-center#modalTitleInput(type="text", required)
+			a.sendPictureButtons.waves-effect.waves-light.btn Send #[i.material-icons.right send]
+	.modal-footer
+		a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href="#!") Retake Photo!
+		a.modal-action.waves-effect.waves-green.btn-flat.sendPictureButtons(href="#!") Send Photo!
